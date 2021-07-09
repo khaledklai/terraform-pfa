@@ -85,3 +85,26 @@ output "node1_float_ip" {
   value = openstack_compute_floatingip_associate_v2.ipflot_ansible_association_node1.floating_ip
 }
 
+
+
+
+
+output "storage_for_ansible_team_name" {
+  description = "The storage name for Ansible team."
+  value = openstack_blockstorage_volume_v3.ansible_volume.name
+}
+
+output "storage_for_ansible_team" {
+  description = "The size of the storage for Ansible team."
+  value = openstack_blockstorage_volume_v3.ansible_volume.size
+}
+
+output "storage_attach_instance_for_ansible_team" {
+  description = "The attachement of the storage for Ansible team."
+  value = openstack_compute_volume_attach_v2.ansible_volume_attach.instance_id
+}
+
+output "storage_attach_device_for_ansible_team" {
+  description = "The attachement of the storage for Ansible team."
+  value = openstack_compute_volume_attach_v2.ansible_volume_attach.device
+}

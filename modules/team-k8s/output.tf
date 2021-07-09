@@ -63,3 +63,29 @@ output "k8s_float_ip" {
   value = openstack_compute_floatingip_associate_v2.ipflot_k8s_association_k8s.floating_ip
 }
 
+
+
+
+
+
+
+output "storage_for_k8s_team_name" {
+  description = "The storage name for Kubernetes team."
+  value = openstack_blockstorage_volume_v3.k8s_volume.name
+}
+
+output "storage_for_k8s_team" {
+  description = "The size of the storage for Kubernetes team."
+  value = openstack_blockstorage_volume_v3.k8s_volume.size
+}
+
+output "storage_attach_instance_for_k8s_team" {
+  description = "The attachement of the storage for Kubernetes team."
+  value = openstack_compute_volume_attach_v2.k8s_volume_attach.instance_id
+}
+
+output "storage_attach_device_for_k8s_team" {
+  description = "The attachement of the storage for Kubernetes team."
+  value = openstack_compute_volume_attach_v2.k8s_volume_attach.device
+}
+

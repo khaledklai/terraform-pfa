@@ -85,3 +85,29 @@ output "worker_float_ip" {
   value = openstack_compute_floatingip_associate_v2.ipflot_docker_association_worker.floating_ip
 }
 
+
+
+
+
+
+
+
+output "storage_for_docker_team_name" {
+  description = "The storage name for Docker team."
+  value = openstack_blockstorage_volume_v3.docker_volume.name
+}
+
+output "storage_for_docker_team" {
+  description = "The size of the storage for Docker team."
+  value = openstack_blockstorage_volume_v3.docker_volume.size
+}
+
+output "storage_attach_instance_for_docker_team" {
+  description = "The attachement of the storage for Docker team."
+  value = openstack_compute_volume_attach_v2.docker_volume_attach.instance_id
+}
+
+output "storage_attach_device_for_docker_team" {
+  description = "The attachement of the storage for Docker team."
+  value = openstack_compute_volume_attach_v2.docker_volume_attach.device
+}
