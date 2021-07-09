@@ -1,0 +1,7 @@
+.terraform
+providers
+.terraform.lock.hcl
+architecture.drawio
+architecture.png
+terraform.tfstate
+terraform.tfstate.backup
